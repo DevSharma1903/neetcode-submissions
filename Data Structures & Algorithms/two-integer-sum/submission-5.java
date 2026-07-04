@@ -1,0 +1,22 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] arr = new int[2];
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i = 0; i<nums.length; i++){
+            map.putIfAbsent(nums[i], i);
+
+            int diff = target - nums[i];
+            if(map.containsKey(diff)){
+                arr[1] = i;
+                arr[0] = map.get(diff);
+            }
+        }
+
+        for(int i = 0; i<nums.length; i++){
+            
+        }
+
+        return arr;
+    }
+
+}
